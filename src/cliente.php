@@ -12,4 +12,19 @@ class Cliente {
     public function setNome(string $nome){
         $this->nome = $nome;
     }
+    //email
+    public function getEmail():string{
+        return $this->email;
+    }
+    public function setEmail(string $email){
+        $this->email = $email;
+    }
+    //senha
+    public function getSenha():string{
+        return $this->senha;
+    }
+    public function setSenha(string $senha){
+        $this->senha = password_hash($senha, PASSWORD_DEFAULT);
+    }
+    
 }
