@@ -21,17 +21,8 @@
 require_once "src/cliente.php";
 
 //Criação dos objetos
-$clienteA = new Cliente();
-$clienteA ->nome = "Guilherme";
-$clienteA ->email = "g.santossantana22@gmail.com";
-$clienteA ->senha = "1234567";
-$clienteA ->telefones = [11976756555,11981229731];
-
-$clienteB = new Cliente();
-$clienteB ->nome = "Carol";
-$clienteB ->email = "carol@gmail.com";
-$clienteB ->senha = "12345678";
-$clienteB ->telefones = [112345678,1140028922];
+$clienteA = new Cliente;
+$clienteB = new Cliente;
 
 
 ?>
