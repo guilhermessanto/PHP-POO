@@ -44,5 +44,8 @@ $clienteB->telefones = array("11-98995-2154")
 <p>Telefones: <?=implode(", ", $clienteA->telefones)?></p>
 <p>Senha: <?=$clienteB->senha?></p>
 
+<h2>Chamando metodo Exibir dados</h2>
+<?= $clienteA->exibirDados();?>
+<?= $clienteB->exibirDados();?>
 </body>
 </html>
