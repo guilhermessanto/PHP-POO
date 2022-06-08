@@ -1,20 +1,19 @@
 <?php
-class Cliente{
-    //propriedades (ou atributos)
+class Cliente {
+    // Propriedades (ou atributos)
     public string $nome;
     public string $email;
     public string $senha;
     public array $telefones;
+
+    // Método construtor
+    public function __construct( string $nome, string $email )
+    {
+        /* $this é uma variável especial, sempre
+        apontando para a referência da Classe atualmente
+        manipulada. */
+        $this->nome = $nome;
+        $this->email = $email;
+    }
+
 }
-
-/* $clienteB ->nome = "Carol";
-$clienteB ->email = "carol@gmail.com";
-$clienteB ->senha = "12345678";
-$clienteB ->telefones = [112345678,1140028922];
-
-$clienteA ->nome = "Guilherme";
-$clienteA ->email = "g.santossantana22@gmail.com";
-$clienteA ->senha = "1234567";
-$clienteA ->telefones = [11976756555,11981229731];
-
-*/
