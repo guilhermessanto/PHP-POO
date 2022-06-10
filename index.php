@@ -15,7 +15,6 @@
     </ul>
 <?php
 // Importando a classe
-require_once "src/Cliente.php";
 require_once "src/PessoaFisica.php";
 require_once "src/PessoaJuridica.php";
 
@@ -35,9 +34,10 @@ $clientePJ -> setEmail('lacasadepastel@gmail.com');
 $clientePJ -> setSenha('2345678A');
 
 ?>
-
+<!-- erro, pois cliente é abstrato -->
 <pre><?=var_dump($clientePF, $clientePJ)?></pre>
-
+<?php $cliente = new Cliente?>
+<pre><?=var_dump($cliente)?></pre>
 
 </body>
 </html>

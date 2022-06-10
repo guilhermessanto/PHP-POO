@@ -1,5 +1,6 @@
 <?php
-class Cliente {
+/* Classes abstract não podem ser instanciadas, não é possivel criar um objeto a partir dessa classe  */
+abstract class Cliente {
     // Propriedades (ou atributos)
     private string $nome;
     private string $email;
