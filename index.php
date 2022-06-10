@@ -12,6 +12,7 @@
     <h2>Assuntos abordados:</h2>
     <ul>
         <li>Herança</li>
+        <li>Classe abstrato</li>
     </ul>
 <?php
 // Importando a classe
