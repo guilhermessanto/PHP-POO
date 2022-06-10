@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo 4</title>
+    <title>Exemplo 5 - Herança</title>
 </head>
 <body>
-    <h1>PHP POO - Exemplo 4</h1>
+    <h1>PHP POO - Exemplo 5</h1>
     <hr>
     <h2>Assuntos abordados:</h2>
     <ul>
@@ -24,14 +24,15 @@ $clienteA = new Cliente;
 $clienteB = new Cliente;
 
 //Atribuindo dados via setters do objeto
-//nome
+
+//cliente A
 $clienteA->setNome("Guilherme");
-$clienteB->setNome("João");
-//email
 $clienteA->setEmail("guilherme@gmail.com");
-$clienteB->setEmail("joao@gmail.com");
-//senha
 $clienteA->setSenha("senha123");
+
+//cliente B
+$clienteB->setNome("João");
+$clienteB->setEmail("joao@gmail.com");
 $clienteB->setSenha("senha321");
 ?>
 
