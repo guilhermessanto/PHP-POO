@@ -11,39 +11,32 @@
     <hr>
     <h2>Assuntos abordados:</h2>
     <ul>
-        <li>Encapsulamento</li>
-        <li>Modificadores de visibilidade</li>
-        <li>Métodos de acesso:  getters e setters</li>
+        <li>Herança</li>
     </ul>
 <?php
 // Importando a classe
 require_once "src/Cliente.php";
+require_once "src/PessoaFisica.php";
+require_once "src/PessoaJuridica.php";
 
-// Criação dos objetos
-$clienteA = new Cliente;
-$clienteB = new Cliente;
+$clientePF = new PessoaFisica;
+$clientePF -> setNome('Guilherme');
+$clientePF -> setEmail('guilherme@gmail.com');
+$clientePF -> setSenha('123asd');
+$clientePF -> setCpf('123-456-789-10');
+$clientePF -> setIdade(23);
 
-//Atribuindo dados via setters do objeto
+$clientePJ = new PessoaJuridica;
+$clientePJ -> setNome('Antonio');
+$clientePJ -> setNomeFantasia('La casa de pastel');
+$clientePJ -> setAnoFundacao(2019);
+$clientePJ -> setCnpj('12.345.678/0001-11');
+$clientePJ -> setEmail('lacasadepastel@gmail.com');
+$clientePJ -> setSenha('2345678A');
 
-//cliente A
-$clienteA->setNome("Guilherme");
-$clienteA->setEmail("guilherme@gmail.com");
-$clienteA->setSenha("senha123");
-
-//cliente B
-$clienteB->setNome("João");
-$clienteB->setEmail("joao@gmail.com");
-$clienteB->setSenha("senha321");
 ?>
 
-<h2>Dados dos objetos (leitura via getters)</h2>
-<h3><?= $clienteA->getNome()?></h3>
-<p><?=$clienteA->getEmail()?></p>
-<p><?=$clienteA->getSenha()?></p>
-
-<h3><?= $clienteB->getNome() ?></h3>
-<p><?=$clienteB->getEmail()?></p>
-<p><?=$clienteB->getSenha()?></p>
+<pre><?=var_dump($clientePF, $clientePJ)?></pre>
 
 
 </body>
