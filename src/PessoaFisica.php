@@ -3,6 +3,13 @@ require_once "Cliente.php";
 class PessoaFisica extends Cliente {
     private string $cpf;
     private int $idade;
+    /* Propriedade estática (não depende de um objeto) */
+    public static string $cidade;
+    /* Método estatico (Não depende de um objeto) */
+    public static function verificaIdade(int $idade):string
+    {
+        return $idade >= 60 ?"Prioridade" :"normal";
+    }
 
     public function __construct()
     {
