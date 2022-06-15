@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo 5 - Herança</title>
+    <title>Exemplo 6 - Polimorfismo</title>
 </head>
 <body>
-    <h1>PHP POO - Exemplo 5</h1>
+    <h1>PHP POO - Exemplo 6</h1>
     <hr>
     <h2>Assuntos abordados:</h2>
     <ul>
-        <li>Herança</li>
-        <li>Classe abstrato</li>
+        <li>Polimorfismo</li>
     </ul>
 <?php
 // Importando a classe
@@ -20,25 +19,30 @@ require_once "src/PessoaFisica.php";
 require_once "src/PessoaJuridica.php";
 
 $clientePF = new PessoaFisica;
-$clientePF -> setNome('Guilherme');
-$clientePF -> setEmail('guilherme@gmail.com');
-$clientePF -> setSenha('123asd');
-$clientePF -> setCpf('123-456-789-10');
-$clientePF -> setIdade(23);
+$clientePF->setNome('Tiago');
+$clientePF->setEmail('tiago@gmail.com');
+$clientePF->setSenha('123abc');
+$clientePF->setCpf('123.456.789-00');
+$clientePF->setIdade(38);
 
 $clientePJ = new PessoaJuridica;
-$clientePJ -> setNome('Antonio');
-$clientePJ -> setNomeFantasia('La casa de pastel');
-$clientePJ -> setAnoFundacao(2019);
-$clientePJ -> setCnpj('12.345.678/0001-11');
-$clientePJ -> setEmail('lacasadepastel@gmail.com');
-$clientePJ -> setSenha('2345678A');
-
+$clientePJ->setNome("Jon Oliva");
+$clientePJ->setCnpj("32.088.0001/000-41");
+$clientePJ->setAnoFundacao(1998);
 ?>
-<!-- erro, pois cliente é abstrato -->
-<pre><?=var_dump($clientePF, $clientePJ)?></pre>
-<?php $cliente = new Cliente?>
-<pre><?=var_dump($cliente)?></pre>
+
+<h3>Pessoa Física</h3>
+<p> <?=$clientePF->getNome()?> </p>
+
+<h3>Pessoa Juridica</h3>
+<p> <?=$clientePJ->getNome()?> </p>
+
+    <hr>
+    <section> <?=$clientePF->exibirDados()?> </section>
+    <section> <?=$clientePJ->exibirDados()?> </section>
+
+
+<!-- <pre> <?=var_dump($clientePF, $clientePJ)?> </pre> -->
 
 </body>
 </html>

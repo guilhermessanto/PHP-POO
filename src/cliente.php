@@ -1,31 +1,55 @@
 <?php
-/* Classes abstract não podem ser instanciadas, não é possivel criar um objeto a partir dessa classe  */
+/* Classes abstratas NÃO PODEM SER INSTANCIADAS.
+Ou seja, não é possível criar um objeto/variável
+a partir desta classe. */
 abstract class Cliente {
-    // Propriedades (ou atributos)
     private string $nome;
     private string $email;
     private string $senha;
+
+    private string $situacao = "a definir";
     
-    /* métodos getters e setters */
-    public function getNome():string{
+    /* Métodos getters e setters */
+    public function getNome():string {
         return $this->nome;
     }
+
     public function setNome(string $nome){
-        $this->nome = $nome;
+        $this->nome = "Cliente: ".$nome;
     }
-    //email
-    public function getEmail():string{
+
+    public function getEmail():string {
         return $this->email;
     }
+
     public function setEmail(string $email){
         $this->email = $email;
     }
-    //senha
-    public function getSenha():string{
+
+    public function getSenha():string {
         return $this->senha;
     }
+
     public function setSenha(string $senha){
         $this->senha = password_hash($senha, PASSWORD_DEFAULT);
     }
+
+    /* Modificador de visibilidade
+    public: nenhuma restrição 
+    (todos acessam todos)
+    private: restrição total 
+    (só a classe conhece os recursos dela) 
     
+    protected: restrição parcial
+    (recursos acessíveis pela própria classe e pelas
+    subclasses que a herdam) */
+    protected function getSituacao(): string
+    {
+        return $this->situacao;
+    }
+
+    protected function setSituacao(string $situacao)
+    {
+        $this->situacao = $situacao;
+    }
 }
